@@ -5,11 +5,13 @@ spring:
     job:
       names: ${job.name:NONE}
 
+logging.level.org.springframework.batch: DEBUG
+
 ---
 spring:
   profiles: postgresql
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/postgres
+    url: jdbc:postgresql://localhost:5432/dms
     username: postgres
     password: postgres
